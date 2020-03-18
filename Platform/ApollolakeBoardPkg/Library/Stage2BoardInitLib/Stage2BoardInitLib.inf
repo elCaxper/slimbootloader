@@ -87,7 +87,7 @@
   gEfiMdePkgTokenSpaceGuid.PcdPciExpressBaseAddress
   gPlatformModuleTokenSpaceGuid.PcdServiceNumber
   gPlatformCommonLibTokenSpaceGuid.PcdMeasuredBootEnabled
-  gPlatformModuleTokenSpaceGuid.PcdCfgDataSize
+  gPlatformModuleTokenSpaceGuid.PcdCfgDataSize 
   gPlatformModuleTokenSpaceGuid.PcdMrcDataSize
   gPlatformCommonLibTokenSpaceGuid.PcdSeedListEnabled
   gPlatformModuleTokenSpaceGuid.PcdPayloadReservedMemSize
