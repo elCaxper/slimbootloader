@@ -185,8 +185,18 @@ InitializeSmbiosInfo (
   //
   AddSmbiosTypeString (&TempSmbiosStrTbl[Index++], SMBIOS_TYPE_SYSTEM_INFORMATION,
     1, "Intel Corporation");
-  if ((PlatformId == PLATFORM_ID_UC100)) {
-    AsciiSPrint (TempStrBuf, sizeof (TempStrBuf), "%a\0", "UC100 Client Platform");
+  if (PlatformId == PLATFORM_ID_OXH) {
+    AsciiSPrint (TempStrBuf, sizeof (TempStrBuf), "%a\0", "OXH Client Platform");
+  } else if(PlatformId == PLATFORM_ID_LFH){
+    AsciiSPrint (TempStrBuf, sizeof (TempStrBuf), "%a\0", "LFH Client Platform");
+  } else if(PlatformId == PLATFORM_ID_JNH){
+    AsciiSPrint (TempStrBuf, sizeof (TempStrBuf), "%a\0", "JNH Client Platform");
+  } else if(PlatformId == PLATFORM_ID_UP2){
+    AsciiSPrint (TempStrBuf, sizeof (TempStrBuf), "%a\0", "UP2 Client Platform");
+  } else if(PlatformId == PLATFORM_ID_GPMRB){
+    AsciiSPrint (TempStrBuf, sizeof (TempStrBuf), "%a\0", "GPMRB Client Platform");
+  } else if(PlatformId == PLATFORM_ID_MB3){
+    AsciiSPrint (TempStrBuf, sizeof (TempStrBuf), "%a\0", "MB3 Client Platform");
   } else {
     AsciiSPrint (TempStrBuf, sizeof (TempStrBuf), "%a\0", "Unknown");
   }
@@ -206,8 +216,18 @@ InitializeSmbiosInfo (
   //
   AddSmbiosTypeString (&TempSmbiosStrTbl[Index++], SMBIOS_TYPE_BASEBOARD_INFORMATION,
     1, "Intel Corporation");
-  if (PlatformId == PLATFORM_ID_UC100) {
-    AsciiSPrint (TempStrBuf, sizeof (TempStrBuf), "%a\0", "UC100 Platform");
+  if (PlatformId == PLATFORM_ID_OXH) {
+    AsciiSPrint (TempStrBuf, sizeof (TempStrBuf), "%a\0", "OXH Platform");
+  } else if(PlatformId == PLATFORM_ID_LFH){
+    AsciiSPrint (TempStrBuf, sizeof (TempStrBuf), "%a\0", "LFH Platform");
+  } else if(PlatformId == PLATFORM_ID_JNH){
+    AsciiSPrint (TempStrBuf, sizeof (TempStrBuf), "%a\0", "JNH Platform");
+  } else if(PlatformId == PLATFORM_ID_UP2){
+    AsciiSPrint (TempStrBuf, sizeof (TempStrBuf), "%a\0", "UP2 Platform");
+  } else if(PlatformId == PLATFORM_ID_GPMRB){
+    AsciiSPrint (TempStrBuf, sizeof (TempStrBuf), "%a\0", "GPMRB Platform");
+  } else if(PlatformId == PLATFORM_ID_MB3){
+    AsciiSPrint (TempStrBuf, sizeof (TempStrBuf), "%a\0", "MB3 Platform");
   } else {
     AsciiSPrint (TempStrBuf, sizeof (TempStrBuf), "%a\0", "Unknown");
   }
@@ -217,10 +237,6 @@ InitializeSmbiosInfo (
     3, "1");
   AddSmbiosTypeString (&TempSmbiosStrTbl[Index++], SMBIOS_TYPE_BASEBOARD_INFORMATION,
     4, "Board Serial Number");
-
-  //
-  // SMBIOS_TYPE_PROCESSOR_INFORMATION : TBD
-  //
 
   //
   // SMBIOS_TYPE_END_OF_TABLE
